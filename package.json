@@ -1,0 +1,24 @@
+{
+  "name": "habit",
+  "version": "1.0.0",
+  "description": "Home Assistant Bot for Interactive Tasking",
+  "main": "habit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blakewenloe/habit.git"
+  },
+  "author": "Blake Enloe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blakewenloe/habit/issues"
+  },
+  "homepage": "https://github.com/blakewenloe/habit#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "discord.js-commando": "git+https://github.com/discordjs/Commando.git",
+    "dotenv": "^8.2.0"
+  }
+}
