@@ -2,6 +2,7 @@ const { CommandoClient } = require("discord.js-commando");
 const path = require("path");
 const dotenv = require("dotenv").config();
 const client_id = process.env.CLIENT_ID;
+const db = require("./db.js");
 
 const client = new CommandoClient({
   commandPrefix: "?",
@@ -12,10 +13,12 @@ const client = new CommandoClient({
 client.registry
   .registerDefaults()
   // Registers all of your commands in the ./commands/ directory
+  .registerGroup("groceries")
   .registerCommandsIn(path.join(__dirname, "commands"));
 
 client.once("ready", async () => {
   console.log(`Logged in as ${client.user.tag}! (${client.user.id})`);
+  db.sync();
 });
 
 client.on("error", console.error);
